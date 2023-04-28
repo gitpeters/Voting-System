@@ -75,7 +75,7 @@ function generateNumbersList() {
     }
     isFormSubmitted = true;
 
-    const name = document.getElementById("name").value;
+    const name = document.getElementById("name").value.trim();
     const selectedNumber = document.querySelector('input[name="number"]:checked');
     if (selectedNumber === null) {
       alert("Please select a number.");
@@ -105,7 +105,7 @@ function generateNumbersList() {
     const resultDiv = document.getElementById("result");
     resultDiv.innerHTML = "";
     const p = document.createElement("p");
-    p.innerHTML = `Thank you, ${name}! You have selected number ${number}. This number is assigned to ${assignedName}.`;
+    p.innerHTML = `Thank you, ${name}! You have selected number ${number}. You picked ${assignedName}.`;
     resultDiv.appendChild(p);
 
     // Remove the assigned name from the available names list
