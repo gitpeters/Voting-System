@@ -16,7 +16,7 @@ firebase.initializeApp(firebaseConfig)
 
 const database = firebase.database();
 
-const names = ['Abraham', 'Israel', 'Chidi', 'Solomon', 'Abosede', 'Evelyn', 'Pedro', 'Reuben', 'Gaius', 'Ebube', 'Emmanuel', 'Amina'];
+const names = ['Abraham', 'Israel', 'Chidi', 'Solomon', 'Abosede', 'Evelyn', 'Pedro', 'Reuben', 'Gaius', 'Ebube', 'Emmanuel', 'Ameenat'];
 
 const numberToName = {
     1: 'Abraham',
@@ -30,7 +30,7 @@ const numberToName = {
     9: 'Gaius',
     10: 'Ebube',
     11: 'Emmanuel',
-    12: 'Amina'
+    12: 'Ameenat'
 };
 
 let numbers = [];
@@ -70,7 +70,7 @@ function generateNumbersList() {
   
   function submitForm(event) {
     event.preventDefault();
-    // If form is already submitted, return early
+
     if (isFormSubmitted) {
         alert("You have submitted the form already.");
         return;
