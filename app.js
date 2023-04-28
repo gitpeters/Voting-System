@@ -148,7 +148,6 @@ function generateNumbersList() {
     snapshot.forEach(function(childSnapshot) {
       const record = childSnapshot.val();
       console.log(record);
-      // Do something with the record
     });
   });
 
