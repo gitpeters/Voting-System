@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Poll Game</title>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="img/logo.png" alt="" srcset="">
+        </div>
+        <h1>Voting System</h1>
+        <form id="number-form">
+            <label for="name">Enter your name:</label>
+            <input type="text" id="name" required>
+            <h2>Select one of the following numbers:</h2>
+            <ul id="numbers-list"></ul>
+            <button type="submit">Submit</button>
+        </form>
+        <div id="result"></div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
