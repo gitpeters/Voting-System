@@ -16,7 +16,7 @@ firebase.initializeApp(firebaseConfig)
 
 const database = firebase.database();
 
-const names = ['Abraham', 'Israel', 'Chidi', 'Solomon', 'Abosede', 'Evelyn', 'Pedro', 'Reuben', 'Gaius', 'Ebube', 'Emmanuel'];
+const names = ['Abraham', 'Israel', 'Chidi', 'Solomon', 'Abosede', 'Evelyn', 'Pedro', 'Reuben', 'Gaius', 'Ebube', 'Emmanuel', 'Amina'];
 
 const numberToName = {
     1: 'Abraham',
@@ -29,13 +29,14 @@ const numberToName = {
     8: 'Reuben',
     9: 'Gaius',
     10: 'Ebube',
-    11: 'Emmanuel'
+    11: 'Emmanuel',
+    12: 'Amina'
 };
 
 let numbers = [];
 
 function generateNumbersList() {
-    while (numbers.length < 11) {
+    while (numbers.length < 12) {
       const randomNum = Math.floor(Math.random() * 100) + 1;
       if (numbers.indexOf(randomNum) === -1) {
         numbers.push(randomNum);
@@ -56,6 +57,7 @@ function generateNumbersList() {
       const randomIndex = Math.floor(Math.random() * names.length);
       const name = names[randomIndex];
       numberToName[num] = name;
+      console.log(numberToName[num]);
   
       label.appendChild(input);
       label.appendChild(document.createTextNode(num));
@@ -91,6 +93,7 @@ function generateNumbersList() {
 
   
     const assignedName = numberToName[number];
+    
   
     if (assignedName === undefined) {
       alert("This number is not assigned to any name.");
